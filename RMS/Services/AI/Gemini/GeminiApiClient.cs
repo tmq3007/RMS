@@ -87,8 +87,7 @@ namespace RMS.Services.AI.Service
         /// </summary>
         public async Task<bool> CheckImageSafetyAsync(byte[] imageBytes, string mimeType = "image/jpeg")
         {
-            // LƯU Ý: Hiện tại chưa có gemini-2.5-flash.
-            // Dùng gemini-1.5-flash (nhanh, ổn định) hoặc gemini-2.0-flash-exp (nếu bạn có quyền truy cập).
+            
             string model = Constant.GEMINI_MODEL_NAME_PRO;
             string url = $"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={_apiKey}";
 
